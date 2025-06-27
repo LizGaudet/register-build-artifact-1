@@ -1,6 +1,6 @@
-= CloudBees action: Inform CloudBees Platform that an artifact version was created
+= CloudBees action: Register a build artifact
 
-Use this action to inform CloudBees Platform that an artifact version was created
+Use this action to inform the CloudBees platform that an artifact version has been created.
 
 == Inputs
 
@@ -12,31 +12,6 @@ Use this action to inform CloudBees Platform that an artifact version was create
 | Data type
 | Required?
 | Description
-
-| `digest`
-| String
-| No
-| The artifact digest that uniquely identifies the artifact.
-
-| `labels`
-| String
-| No
-| A comma-separated list of artifact labels.
-
-| `name`
-| String
-| Yes
-| The name of the artifact to send to the {PRODUCT} for artifact traceability purposes.
-
-| `url`
-| String
-| Yes
-| The URL where the artifact version is located.  For example, docker.io/myapp/myimg:1.0.0.
-
-| `version`
-| String
-| Yes
-| The version of the artifact to send to the {PRODUCT} for artifact traceability purposes.
 
 | `repository-url`
 | String
@@ -56,6 +31,9 @@ Use this action to inform CloudBees Platform that an artifact version was create
 | String
 | No
 | The ref or branch of the checked-out repository.
+
+
+
 |===
 
 Note: By default `repository-url`, `commit`, `commit-url` and `ref` inputs
